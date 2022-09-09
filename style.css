@@ -19,6 +19,7 @@ html body {
 .container {
   width: 100%;
   max-width: 1300px;
+  /* max-width: 90%; */
   margin: auto;
 }
 img {
@@ -74,6 +75,7 @@ a {
 }
 .main-nav ul li:hover {
   border-bottom: 2px solid #000;
+  padding-bottom: 2px;
 }
 .btn {
   background: #1e6baa;
@@ -86,6 +88,7 @@ a {
   min-height: 90vh;
   background: url("/imegiz/Highlight-Hero-Windows11-GlobalLaunch_VP4-1399x600\ \(1\).jpeg")
     no-repeat center center/cover;
+  /* margin-bottom: 45px; */
   display: flex;
   color: #fff;
   flex-direction: column;
@@ -98,6 +101,7 @@ a {
 }
 .showcase img {
   width: 100%;
+  height: 100%;
 }
 .showcase a {
   color: #fff;
@@ -123,9 +127,11 @@ p {
 }
 /* home-cards */
 .home-cards {
-  max-width: 1200px;
-  margin: 5rem auto;
-  padding: 3rem 0;
+  /* max-width: 1200px; */
+  /* margin: 5rem auto; */
+  /* padding: 3rem 0; */
+  width: 90%;
+  margin: auto;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
@@ -138,13 +144,15 @@ p {
   padding-bottom: 10px;
   height: 160px;
 } */
-.home-cards img {
+/* .home-cards img {
   height: 150px;
   width: 280px;
-  /* margin-bottom: 15px; */
-}
+  margin-bottom: 15px;
+} */
 .home-cards img {
   width: 100%;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 .home-cards h3 {
   font-size: 24px;
@@ -157,6 +165,7 @@ p {
 }
 .home-cards .see {
   color: #262626;
+  margin: auto;
 }
 .home-cards p {
   margin-bottom: 20px;
@@ -359,17 +368,29 @@ p {
   }
 }
 @media (max-width: 825px) {
+  .showcase img {
+    margin: auto;
+    width: 99%;
+    transform: translate(-3rem);
+    display: none;
+    /* z-index: -0; */
+  }
+  .showcase {
+    background: url("/imegiz/Highlight-Hero-Windows11-GlobalLaunch_VP4-1399x600\ \(1\).jpeg")
+      no-repeat 100% 76%;
+  }
   .home-cards {
     grid-template-columns: repeat(2, 1fr);
     /* grid-column-gap: 30px; */
   }
-  .home-cards img {
+  /* .home-cards img {
     height: 150px;
     width: 360px;
-    /* margin-bottom: 15px; */
-  }
+    margin-bottom: 15px;
+  } */
   .home-cards img {
-    width: 100%;
+    width: 90%;
+    height: 50%;
   }
   .links-inner {
     grid-template-columns: repeat(3, 1fr);
@@ -391,14 +412,7 @@ p {
   .showcase {
     max-width: 650px;
   }
-  .home-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .home-cards img {
-    height: 150px;
-    width: 360px;
-    /* margin-bottom: 15px; */
-  }
+
   .main-nav img {
     position: absolute;
     top: 20px;
@@ -413,14 +427,50 @@ p {
 }
 
 @media (max-width: 529px) {
+  .showcase img {
+    margin: auto;
+    width: 99%;
+    transform: translate(-3rem);
+    display: none;
+    /* z-index: -0; */
+  }
+  .showcase {
+    background: url("/imegiz/Highlight-Hero-Windows11-GlobalLaunch_VP4-1399x600\ \(1\).jpeg")
+      no-repeat 50% 50%;
+  }
   .home-cards {
     grid-template-columns: 1fr;
+    width: 91%;
+    margin: auto 3rem;
+    margin-top: 7rem;
+    /* background: black; */
+  }
+  .cardcontent {
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+  .home-cards img {
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    margin-top: 7rem;
+  }
+  .home-cards p {
+    width: 70%;
+    font-size: 14px;
+  }
+  .homecards.see {
+    display: none;
+    margin-bottom: 7rem;
   }
   .showcase h3 {
     font-size: 1rem;
   }
   .showcase p {
     font-size: 10px;
+    width: 70%;
   }
   .home-cards h3 {
     font-size: 14px;
@@ -445,13 +495,37 @@ p {
 .main-btn {
   width: 20px;
 }
+.follow {
+  margin: 4rem 0;
+}
 
 @media (max-width: 430px) {
-  /* .main-nav img {
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    width: 80px; */
+  .home-cards img:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .home-cards img:nth-child(2) {
+    transform: translateY(-2rem);
+    /* height: 50%; */
+  }
+  .home-cards h3 {
+    text-transform: capitalize;
+  }
+  .home-cards img {
+    width: 92%;
+    height: 60%;
+    align-items: center;
+    /* margin-top: 5rem; */
+    margin: auto;
+  }
+  .home-cards a {
+    margin: 2rem 0;
+    /* padding:8px; */
+    padding: 8px;
+  }
+  .main-nav img {
+    width: 30%;
+  }
   .showcase img {
     min-height: 50vh;
     width: 100%;
@@ -475,6 +549,9 @@ p {
   }
   .main-btn {
     width: 20px;
+  }
+  .homecardz p {
+    display: none;
   }
   .footer-inner {
     font-size: 8px;
@@ -502,5 +579,8 @@ p {
   }
   .xbox .content h2 {
     padding-bottom: 48px;
+  }
+  .follow {
+    margin: 2rem;
   }
 }
